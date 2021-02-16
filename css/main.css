@@ -183,6 +183,7 @@ footer {
 	align-items: center;
 	margin: 0 auto;
 	text-align: center;
+	width: 100%;
 	}
 
 footer span {
@@ -192,6 +193,57 @@ footer span {
 	font-size: 0.88em;
 }
 
-/*---------- TABLET ----------*/
-/*Add media queries for tablet and desktop below*/
+/* ----------- Tablets larger than 768px wide ----------- */
+@media all and (min-width: 768px) {
+  .bottom-section {
+	align-items: flex-start;
+	flex-flow: row nowrap;
+  }
+  .section-one, 
+  .section-two, 
+  .section-three {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-flow: column;
+	margin: 0 auto;
+	padding-right: 0.8em; 
+	width: 100%;
+  }
+  .section-two {
+	padding-left: 0.8em; 
+	border-left: 0.06em solid #eee;
+	border-right: 0.06em solid #eee;
+  }
+  .section-three {
+	  padding-left: 0.8em;
+  }
+}
+
+/* ----------- Monitors larger than 1200px wide ----------- */
+@media all and (min-width: 1200px) {
+	header {
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	}
+	header h1 {
+	width: 30%;
+	padding: 0;
+	text-align: flex-start;
+	}
+	#line-break {
+		height: 0;
+		width: 0%;
+	}
+	header nav ul {
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-direction: row;
+		padding: 0;
+	}
+	header nav {
+		width: 40%;
+	}
+}
 
